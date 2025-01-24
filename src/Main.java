@@ -4,8 +4,8 @@ public class Main {
         Triangle triangle   = new Triangle(30,10);
         Rond rond           = new Rond(10,20);
 
-        System.out.println(rectangle.toString());
-        System.out.println(triangle.toString());
-        System.out.println(rond.toString());
+        System.out.println(rectangle);
+        System.out.println(triangle);
+        System.out.println(rond);
     }
 }

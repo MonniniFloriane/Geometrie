@@ -13,6 +13,8 @@ public class Triangle {
 
     @Override
     public String toString() {
-        return "Ce triangle mesure" + " " + getTriangleArea() + " " + "de cotées";
+        return "Ce triangle mesure" + " " + getTriangleArea() + " " + "de cotées" + "\n"
+                + "cote : " + this.cote + "\n"
+                + "air : " + this.air + "\n";
     }
 }

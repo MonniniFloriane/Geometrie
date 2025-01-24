@@ -13,6 +13,8 @@ public class Rectangle {
 
     @Override
     public String toString() {
-        return "Ce rectangle mesure" + " " + getRectangle();
+        return "Ce rectangle mesure" + " " + getRectangle() + "\n"
+                + "largeur : " + this.largeur + "\n"
+                + "hauteur : " + this.hauteur + "\n";
     }
 }

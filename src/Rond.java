@@ -13,6 +13,8 @@ public class Rond {
 
     @Override
     public String toString() {
-        return "Ce rond mesure" + " " + getPerimetreRond() + " " + "de circonférence";
+        return "Ce rond mesure" + " " + getPerimetreRond() + " " + "de circonférence" + "\n"
+                + "rayon : " + this.rayon + "\n"
+                + "perimetre : " + this.perimetre + "\n";
     }
 }
