@@ -1,27 +1,25 @@
-public class Dessin {
-    private Forme forme;
-    private Forme forme1;
-    private Forme forme2;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-    public Dessin() {
-        forme = new Rectangle(20,20);
-        forme1 = new Triangle(20);
-        forme2 = new Rond(20);
+public class Dessin {
+    private List<Forme> formes = new ArrayList<>();
+
+    public Dessin(Forme...formes) {
+        this.formes.addAll(Arrays.asList(formes));
     }
 
     public Forme getForme() {
-        return forme;
+        return formes.getFirst();
     }
 
-    public void setForme(Forme forme) {
-        this.forme = forme;
+    public void setForme(List<Forme> forme) {
+        this.formes = forme;
     }
 
     @Override
     public String toString() {
         return "Je suis un dessin qui contient \n"
-                + forme + "\n"
-                + forme1 + "\n"
-                + forme2 + "\n";
+                + this.formes + "\n";
     }
 }

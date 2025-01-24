@@ -23,7 +23,7 @@ public class Main {
         System.out.println(f);
 
         System.out.println("****Exemple avec classe générale****\n");
-        Dessin d = new Dessin();
+        Dessin d = new Dessin(new Rectangle(10,10), new Triangle(20), new Rond(20));
         System.out.println(d);
     }
 }
