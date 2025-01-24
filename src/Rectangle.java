@@ -1,6 +1,6 @@
 public class Rectangle extends Forme {
-    public int largeur = 0;
-    public int hauteur = 0;
+    private int largeur = 0;
+    private int hauteur = 0;
 
     public Rectangle(int largeur, int hauteur) {
         this.largeur = largeur;

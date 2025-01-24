@@ -21,5 +21,9 @@ public class Main {
 
         f = new Rond(10);
         System.out.println(f);
+
+        System.out.println("****Exemple avec classe générale****\n");
+        Dessin d = new Dessin();
+        System.out.println(d);
     }
 }

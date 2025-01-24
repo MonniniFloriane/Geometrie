@@ -1,5 +1,5 @@
 public class Rond extends Forme {
-    public int diametre = 0;
+    private int diametre = 0;
 
     public Rond(int diametre) {
         this.diametre = diametre;

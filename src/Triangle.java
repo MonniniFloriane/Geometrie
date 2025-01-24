@@ -1,5 +1,5 @@
 public class Triangle extends Forme {
-    public int cote = 0;
+    private int cote = 0;
 
     public Triangle(int cote) {
         this.cote = cote;
