@@ -2,9 +2,9 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("****Classe classique****\n");
 
-        Rectangle rectangle = new Rectangle(5,10);
-        Triangle triangle   = new Triangle(10);
-        Rond rond           = new Rond(5);
+        Rectangle rectangle = new Rectangle(5,10, 20,50);
+        Triangle triangle   = new Triangle(10,20,50);
+        Rond rond           = new Rond(5, 20,50);
 
         System.out.println(rectangle);
         System.out.println(triangle);
@@ -13,17 +13,19 @@ public class Main {
         System.out.println("****Exemple avec classe mère****\n");
 
         Forme f;
-        f = new Rectangle(10,10);
+        f = new Rectangle(10,10, 20,50);
         System.out.println(f);
 
-        f = new Triangle(20);
+        f = new Triangle(20,10,30);
         System.out.println(f);
 
-        f = new Rond(10);
+        f = new Rond(10,10,30);
         System.out.println(f);
 
         System.out.println("****Exemple avec classe générale****\n");
-        Dessin d = new Dessin(new Rectangle(10,10), new Triangle(20), new Rond(20));
+        Dessin d = new Dessin(new Rectangle(10,10,20, 50),
+                new Triangle(20,10,30),
+                new Rond(20,20,10));
         System.out.println(d);
     }
 }

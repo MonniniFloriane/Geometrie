@@ -21,6 +21,6 @@ public class Dessin {
     public String toString() {
         return "Je suis un dessin qui contient \n"
                 + this.formes + "\n"
-                + "je messure" + " " + getPerimetre();
+                + "je messure" + " " + getPerimetre() + "\n";
     }
 }

@@ -1,7 +1,10 @@
+import java.util.Arrays;
+
 public class Rond extends Forme {
     private int diametre = 0;
 
-    public Rond(int diametre) {
+    public Rond(int diametre, int x, int y) {
+        super(x,y);
         this.diametre = diametre;
     }
 
@@ -13,6 +16,7 @@ public class Rond extends Forme {
     @Override
     public String toString() {
         return "Ce rond mesure" + " " + getPerimetre() + " " + "de circonférence" + "\n"
-                + "rayon : " + this.diametre + "\n";
+                + "rayon : " + this.diametre + "\n"
+                + super.toString();
     }
 }

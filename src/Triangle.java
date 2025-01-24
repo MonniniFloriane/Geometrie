@@ -1,7 +1,10 @@
+import java.util.Arrays;
+
 public class Triangle extends Forme {
     private int cote = 0;
 
-    public Triangle(int cote) {
+    public Triangle(int cote, int x, int y) {
+        super(x, y);
         this.cote = cote;
     }
 
@@ -13,6 +16,7 @@ public class Triangle extends Forme {
     @Override
     public String toString() {
         return "Ce triangle mesure" + " " + getPerimetre() + " " + "de cotées" + "\n"
-                + "cote : " + this.cote + "\n";
+                + "cote : " + this.cote + "\n"
+                + super.toString();
     }
 }
