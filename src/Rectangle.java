@@ -8,7 +8,7 @@ public class Rectangle {
     }
 
     public int getRectangle() {
-        return largeur * hauteur;
+        return (this.largeur * this.hauteur) * 2;
     }
 
     @Override
