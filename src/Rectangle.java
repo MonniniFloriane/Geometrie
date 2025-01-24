@@ -1,4 +1,4 @@
-public class Rectangle {
+public class Rectangle extends Forme {
     public int largeur = 0;
     public int hauteur = 0;
 
@@ -7,13 +7,14 @@ public class Rectangle {
         this.hauteur = hauteur;
     }
 
-    public int getRectangle() {
+    @Override
+    public double getPerimetre() {
         return (this.largeur * this.hauteur) * 2;
     }
 
     @Override
     public String toString() {
-        return "Ce rectangle mesure" + " " + getRectangle() + "\n"
+        return "Ce rectangle mesure" + " " + getPerimetre() + "\n"
                 + "largeur : " + this.largeur + "\n"
                 + "hauteur : " + this.hauteur + "\n";
     }

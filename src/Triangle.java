@@ -1,17 +1,18 @@
-public class Triangle {
+public class Triangle extends Forme {
     public int cote = 0;
 
     public Triangle(int cote) {
         this.cote = cote;
     }
 
-    public int getTriangleArea() {
+    @Override
+    public double getPerimetre() {
         return cote * 3;
     }
 
     @Override
     public String toString() {
-        return "Ce triangle mesure" + " " + getTriangleArea() + " " + "de cotées" + "\n"
+        return "Ce triangle mesure" + " " + getPerimetre() + " " + "de cotées" + "\n"
                 + "cote : " + this.cote + "\n";
     }
 }
