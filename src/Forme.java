@@ -5,7 +5,16 @@ public abstract class Forme {
     protected int x = 0;
     protected int y = 0;
 
+    public Forme() {}
+
+    public Forme(int x, int y) {
+        this.x += x;
+        this.y += y;
+    };
+
     public abstract double getPerimetre();
+    public abstract String toHTMLCanvas();
+
     //location
     public int getX() {
         return this.x;
@@ -15,10 +24,14 @@ public abstract class Forme {
         return this.y;
     }
 
-    public Forme(int dx, int dy) {
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void translate(int dx, int dy) {
         this.x += dx;
         this.y += dy;
-    };
+    }
 
     @Override
     public String toString() {

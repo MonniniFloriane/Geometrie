@@ -1,31 +1,69 @@
+import java.text.Normalizer;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        System.out.println("****Classe classique****\n");
 
-        Rectangle rectangle = new Rectangle(5,10, 20,50);
-        Triangle triangle   = new Triangle(10,20,50);
-        Rond rond           = new Rond(5, 20,50);
+        Rectangle r  = new Rectangle();
+        Rectangle r2 = new Rectangle(10,20);
+        Triangle t   = new Triangle();
+        Rond c       = new Rond();
 
-        System.out.println(rectangle);
-        System.out.println(triangle);
-        System.out.println(rond);
+        System.out.println(r);
+        System.out.println(t);
+        System.out.println(c);
+        System.out.println(r2);
 
-        System.out.println("****Exemple avec classe mère****\n");
+        System.out.println(t.getPerimetre());
+        System.out.println(r.getPerimetre());
+        System.out.println(c.getPerimetre());
+
+        r = new Rectangle(100,1000);
+        r = new Rectangle(100290,1000);
+        r = new Rectangle(1020,1000);
+        r = new Rectangle(1040,1000);
+        r = new Rectangle(1500,1000);
+        System.out.println(r);
+
 
         Forme f;
-        f = new Rectangle(10,10, 20,50);
-        System.out.println(f);
+        f = new Rond();
+        System.out.println(f.getPerimetre());
+        f = new Rectangle();
+        System.out.println(f.getPerimetre());
+        f = new Triangle();
+        System.out.println(f.getPerimetre());
 
-        f = new Triangle(20,10,30);
-        System.out.println(f);
+        r.setLargeur(999999);
+        System.out.println(r);
+        f = r;
+        System.out.println(f.getPerimetre());
+        //f.setLongueur(0);  // interdit, la forme ne sait pas faire setLongueur
 
-        f = new Rond(10,10,30);
-        System.out.println(f);
+        System.out.println("----------------------\nPositions\n------------");
+        System.out.println(r.getX());
+        System.out.println(r.getY());
+        r.translate(5, 500);
+        System.out.println(r.getX());
+        System.out.println(r.getY());
 
-        System.out.println("****Exemple avec classe générale****\n");
-        Dessin d = new Dessin(new Rectangle(10,10,20, 50),
-                new Triangle(20,10,30),
-                new Rond(20,20,10));
-        System.out.println(d);
+        r.setX(999);
+        System.out.println(r.getX());
+
+        Rond c2 = new Rond(5, 1,2);
+
+
+        System.out.println("----------------------\ntoHTML\n------------");
+        System.out.println("rectangle : ");
+        System.out.println(r.toHTMLCanvas());
+        System.out.println(new Rectangle().toHTMLCanvas());
+
+        System.out.println("cercle : ");
+        System.out.println(new Rond().toHTMLCanvas());
+
+        System.out.println("triangle : ");
+        System.out.println(new Triangle().toHTMLCanvas());
+
     }
 }
